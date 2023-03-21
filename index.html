@@ -108,12 +108,12 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>HKUSTGZ,</span>
+            <span class="author-block"><sup>1</sup>HKUST(GZ),</span>
             <span class="author-block"><sup>2</sup>HKUST</span>
             <span class="author-block"><sup>3</sup>NIO Autonomous Driving</span>
           </div>
 
-          <div class="column has-text-centered">
+<!--           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
@@ -163,7 +163,7 @@
                   </span>
                   <span>Data</span>
                   </a>
-            </div>
+            </div> -->
 
           </div>
         </div>
@@ -172,7 +172,7 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -186,7 +186,7 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 
 
 
@@ -197,39 +197,15 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+          <p> This work explores the use of 3D generative models to synthesize training data for 3D vision tasks. The key requirements of the generative models are that the generated data should be photorealistic to match the real-world scenarios, and the corresponding 3D attributes should be aligned with given sampling labels. However, we find that the recent NeRF-based 3D GANs hardly meet the above requirements due to their designed generation pipeline and the lack of explicit 3D supervision. In this work, we propose Lift3D, an inverted 2D-to-3D generation framework to achieve the data generation objectives. Lift3D has several merits compared to prior methods: (1) Unlike previous 3D GANs that the output resolution is fixed after training, Lift3D can generalize to any camera intrinsic with higher resolution and photorealistic output. (2) By lifting well-disentangled 2D GAN to 3D object NeRF, Lift3D provides explicit 3D information of generated objects, thus offering accurate 3D annotations for downstream tasks. We evaluate the effectiveness of our framework by augmenting autonomous driving datasets. Experimental results demonstrate that our data generation framework can effectively improve the performance of 3D object detectors.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
-    <!-- Paper video. -->
+    
+<!--     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
@@ -239,11 +215,12 @@
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
+    <!--/ Paper video. --> -->
+    
   </div>
 </section>
 
-
+<!-- 
 <section class="section">
   <div class="container is-max-desktop">
 
@@ -378,21 +355,22 @@
     <!--/ Concurrent Work. -->
 
   </div>
-</section>
+</section> -->
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@InProceedings{lift3D2023CVPR, 
+	author = {Leheng Li and Qing Lian and Luozhou Wang and Ningning Ma and Ying-Cong Chen}, 
+	title = {Lift3D: Synthesize 3D Training Data by Lifting 2D GAN to 3D Generative Radiance Field}, 
+	booktitle = {Proc. IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)}, 
+	year = {2023}, 
 }</code></pre>
   </div>
 </section>
 
+  
 
 <footer class="footer">
   <div class="container">
