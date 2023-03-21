@@ -7,7 +7,6 @@
   <meta name="keywords" content="NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lift3D: Synthesize 3D Training Data by Lifting 2D GAN to 3D Generative Radiance Field</title>
-
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
@@ -42,48 +41,6 @@
 </head>
 <body>
   
-<!-- 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
- -->
 
 <section class="hero">
   <div class="hero-body">
@@ -113,11 +70,11 @@
             <span class="author-block"><sup>3</sup>NIO Autonomous Driving</span>
           </div>
 
-<!--            <div class="column has-text-centered">
+           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="https://len-li.github.io/assets/pdf/lift3d_final.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -125,7 +82,7 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://arxiv.org/abs/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -133,9 +90,9 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -143,10 +100,10 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/Len-Li/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -154,20 +111,15 @@
                   <span>Code</span>
                   </a>
               </span>
-
             </div> 
-
-          </div> -->
+          </div> 
         </div> 
-	  
       </div>
     </div>
   </div>
 </section>
 
 
-
-	
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -176,45 +128,70 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p> This work explores the use of 3D generative models to synthesize training data for 3D vision tasks. The key requirements of the generative models are that the generated data should be photorealistic to match the real-world scenarios, and the corresponding 3D attributes should be aligned with given sampling labels. However, we find that the recent NeRF-based 3D GANs hardly meet the above requirements due to their designed generation pipeline and the lack of explicit 3D supervision. In this work, we propose Lift3D, an inverted 2D-to-3D generation framework to achieve the data generation objectives. Lift3D has several merits compared to prior methods: (1) Unlike previous 3D GANs that the output resolution is fixed after training, Lift3D can generalize to any camera intrinsic with higher resolution and photorealistic output. (2) By lifting well-disentangled 2D GAN to 3D object NeRF, Lift3D provides explicit 3D information of generated objects, thus offering accurate 3D annotations for downstream tasks. We evaluate the effectiveness of our framework by augmenting autonomous driving datasets. Experimental results demonstrate that our data generation framework can effectively improve the performance of 3D object detectors.
+          <p>
+            This work explores the use of 3D generative models to synthesize training data for 3D vision tasks. The key requirements
+            of the generative models are that the generated data should be photorealistic to match the real-world scenarios, and the
+            corresponding 3D attributes should be aligned with given sampling labels. However, we find that the recent NeRF-based 3D
+            GANs hardly meet the above requirements due to their designed generation pipeline and the lack of explicit 3D
+            supervision.
+          </p>
+          <p>
+            In this work, we propose Lift3D, an inverted 2D-to-3D generation framework to achieve the data generation objectives.
+            Lift3D has several merits compared to prior methods: (1) Unlike previous 3D GANs that the output resolution is fixed
+            after training, Lift3D can generalize to any camera intrinsic with higher resolution and photorealistic output. (2) By
+            lifting well-disentangled 2D GAN to 3D object NeRF, Lift3D provides explicit 3D information of generated objects, thus
+            offering accurate 3D annotations for downstream tasks.
+          </p>
+          <p>
+            We evaluate the effectiveness of our framework by augmenting autonomous driving datasets. Experimental results
+            demonstrate that our data generation framework can effectively improve the performance of 3D object detectors.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
-    
-  </div>
-</section>
-
-	
-	
-<div class="columns is-centered has-text-centered">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Method</h2>
         <img src="./static/lift3d_method.png" class="center" width="800px">
         <div class="content has-text-justified">
-          <p> 
-            By distilling 3D knowledge from a well-trained 2D GAN, <strong>Lift3D</strong> enables training data generation by providing photorealistic synthesis and precise 3D annotation. 
+          <p>
+            By distilling 3D knowledge from a well-trained 2D GAN, <strong>Lift3D</strong> enables training data generation and
+            providing photorealistic synthesis and precise 3D annotation.
           </p>
         </div>
       </div>
     </div>
+    <!--/ Method. -->
+
+  </div>
+
+</section>
+
 	
-	
-	
+
+
+
+
 <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Results</h2>
-        <img src="./static/lift3d_compos.png" class="center" width="1200px">
-        <div class="content has-text-justified">
-          <p> 
-	    We show generation result of <strong>Lift3D</strong>. The images are composited by our generated objects and original background.
-          </p>
-        </div>
-      </div>
+  <div class="column is-four-fifths">
+    <h2 class="title is-3">Results</h2>
+    <img src="./static/lift3d_compos.png" class="center" width="1000px">
+    <div class="content has-text-justified">
+        <p style="text-align:center">
+          We show generation result of <strong>Lift3D</strong>. The images are composited by our generated objects and original background.
+        </p>
     </div>
-	
+  </div>
+</div>
+
+
+
+
+
+
 
 	
 
@@ -236,27 +213,22 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="https://len-li.github.io/assets/pdf/lift3d_final.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/Len-Li" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+          <p style="text-align:center">
+            Web source code mainly borrowed from <a href="https://keunhong.com/">Keunhong Park</a>'s <a
+              href="https://nerfies.github.io/">Nerfies website</a>.
           </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+          <p style="text-align:center">
+            Please contact <a href="https://len-li.github.io/">Leheng Li</a> if you have feedback or questions for this project.
           </p>
         </div>
       </div>
